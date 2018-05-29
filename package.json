@@ -1,0 +1,22 @@
+{
+  "name": "out-tours",
+  "version": "1.0.0",
+  "description": "Landing page for Out-Tours",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass" : "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsasselli/Out-Tours.git"
+  },
+  "author": "Travis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsasselli/Out-Tours/issues"
+  },
+  "homepage": "https://github.com/tsasselli/Out-Tours#readme",
+  "dependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
