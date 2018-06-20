@@ -16,7 +16,7 @@
         width: 100%;
         backface-visibility: hidden;
         border-radius: 3px;
-        overflow: hidden; // hides the image from overflowing the corners.
+        // overflow: hidden; // hides the image from overflowing the corners.
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
     &--front {
@@ -28,6 +28,14 @@
 
         &-1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        }
+
+        &-2 {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        }
+
+        &-3 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
         }
      }
     }
@@ -47,6 +55,8 @@
         height: 23rem;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
 
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
@@ -54,10 +64,12 @@
         }
 
         &--2 {
-            background-image: url(../image/nat-6.jpg);
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+            url(../image/nat-6.jpg);
         }
         &--3 {
-            background-image: url(../image/nat-7.jpg);
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+            url(../image/nat-7.jpg);
         }
     }
 
@@ -71,6 +83,7 @@
         top: 12rem;
         right: 2rem;
         width: 70%;
+        z-index: 1;
     }
 
     &__heading-span {
@@ -83,6 +96,18 @@
                             rgba($color-secondary-light, .85), 
                             rgba($color-secondary-dark, .85));
         }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom,
+                            rgba($color-primary-light, .85), 
+                            rgba($color-primary-dark, .85));
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom,
+                            rgba($color-tertiary-light, .85), 
+                            rgba($color-tertiary-dark, .85));
+        }
     }
 
     &__details {
@@ -92,8 +117,10 @@
             list-style: none;
             width: 80%;
             margin: 0 auto;
+            padding: 0;
 
             li {
+                color: $color-black;
                 text-align: center;
                 font-size: 1.5rem;
                 padding: 1rem;
