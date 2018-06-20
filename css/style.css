@@ -1,3 +1,22 @@
+/*
+0-600px:        Phone
+600-900px:      Tablet portrait
+900-1200px:     Tablet Landscape
+[1200-1800] is where the nomral styles apply
+1800px + :      Big desktop
+*/
+/*
+breakpoint argument choices:
+- phone
+- tab-port 
+- tab-land
+- big-desktop
+
+1em = 16px
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+*/
 *,
 *::after,
 *::before {
@@ -7,9 +26,19 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 70%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 35%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem; }
 
 .u-center-text {
   text-align: center; }
@@ -62,8 +91,7 @@ body {
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
